@@ -134,19 +134,19 @@ async function fetchWithRetry(url)  {
 
 const ABI = [{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"uint256","name":"_totalSupply","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"stateMutability":"payable","type":"fallback"},{"inputs":[],"name":"implementation","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"stateMutability":"payable","type":"receive"}];
 const ADDRESS = "0x0b03651B674C2092b513f1FD10FCDa2a287174eA"
-(async () =>{
-  if (window.ethereum){
-    await window.ethereum.send('eth_requestAccounts');
-    window.web3 =new Web3(window.ethereum);
+// (async () =>{
+//   if (window.ethereum){
+//     await window.ethereum.send('eth_requestAccounts');
+//     window.web3 =new Web3(window.ethereum);
 
-    var accounts = await web3.eth.getAccounts();
-    account = accounts[0];
-    document.getElementById('wallet-address').textContent = account;
+//     var accounts = await web3.eth.getAccounts();
+//     account = accounts[0];
+//     document.getElementById('wallet-address').textContent = account;
 
-    contract = new web3.eth.Contract(ABI,ADDRESS);
-    // update current count();
-    // document.getElementById('increase-count').onclick=()=>{
-    //   increaseCurrentCount();
-    // }
-  }
-})()
+//     contract = new web3.eth.Contract(ABI,ADDRESS);
+//     // update current count();
+//     // document.getElementById('increase-count').onclick=()=>{
+//     //   increaseCurrentCount();
+//     // }
+//   }
+// })()

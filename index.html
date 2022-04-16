@@ -83,9 +83,18 @@
         <h1>Win NYC hotel accommodation ⤵️</h1>   
         <p>Each NFT is an entry to ruffle.</p>
         <!-- ***current discord connection, supposed to be mint button*** -->
-        <input class="hero-btn btn" type="submit" value="Mint"/><span>mint my rat</span>
+        <button class="hero-btn btn" id="mint">mint my rat</button> 
         <!-- ***current discord connection, supposed to be mint button*** -->
       </div>
+      <script type="text/javascript">
+        const ABI = [{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"uint256","name":"_totalSupply","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"stateMutability":"payable","type":"fallback"},{"inputs":[],"name":"implementation","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"stateMutability":"payable","type":"receive"}];
+        const ADDRESS = "0x0b03651B674C2092b513f1FD10FCDa2a287174eA"
+        contract = new web3.eth.Contract(ABI,ADDRESS);
+        // update current count();
+        // document.getElementById('increase-count').onclick=()=>{
+        //   increaseCurrentCount();
+        // }
+      </script>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
